@@ -1,4 +1,6 @@
 VSchedule::Application.routes.draw do
+  resources :vaccinations
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

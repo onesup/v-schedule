@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  timing: 2011-03-14 01:42:53
+  contury: MyString
+
+two:
+  title: MyString
+  timing: 2011-03-14 01:42:53
+  contury: MyString

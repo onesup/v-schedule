@@ -2,7 +2,8 @@ class CreateVaccinations < ActiveRecord::Migration
   def self.up
     create_table :vaccinations do |t|
       t.string :title
-      t.timestamp :timing
+      t.text :desc
+      t.integer :timing
       t.string :contury
 
       t.timestamps

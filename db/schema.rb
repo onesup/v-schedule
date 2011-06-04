@@ -10,10 +10,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110529124048) do
+ActiveRecord::Schema.define(:version => 20110604070408) do
+
+  create_table "babies", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "children", :force => true do |t|
     t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "inoculation_logs", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "parents", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -40,6 +55,10 @@ ActiveRecord::Schema.define(:version => 20110529124048) do
     t.string   "contury"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "series"
+    t.integer  "least"
+    t.string   "nip"
+    t.string   "injection_type"
   end
 
 end

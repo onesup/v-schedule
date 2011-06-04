@@ -72,4 +72,6 @@
     
   {:title => "폴리오", :series => "4차", :timing => 4.year,   :least => 6.year, 
     :desc => "소아마(기초)"}
-]
+].each do |data|
+  Vaccination.create(data)
+end

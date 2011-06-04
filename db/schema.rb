@@ -10,10 +10,32 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110313164252) do
+ActiveRecord::Schema.define(:version => 20110529124048) do
+
+  create_table "children", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "posts", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "view_count"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tests", :force => true do |t|
+    t.string   "name"
+    t.integer  "count"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "vaccinations", :force => true do |t|
     t.string   "title"
+    t.text     "desc"
     t.integer  "timing"
     t.string   "contury"
     t.datetime "created_at"

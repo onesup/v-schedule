@@ -7,6 +7,8 @@ require 'hpricot'
 class TwitterBot
 	attr_accessor :client, :count, :userid, :password
 	def new_account
+	  @userid = "onesup"
+	  @password = "card58"
 		@count = 0
 		client = TwitterOAuth::Client.new(
 			:consumer_key 		=> "G63VRycj2qz75vZEJWve2g",

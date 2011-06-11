@@ -2,6 +2,12 @@ VSchedule::Application.routes.draw do
   resources :posts
 
   resources :vaccinations
+  
+  match '/main/new' => 'main#new'
+  match '/main/:id' => 'main#show'
+  match '/main/create' => 'main#create'
+  
+  match '/main' => 'main#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

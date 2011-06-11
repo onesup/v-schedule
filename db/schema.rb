@@ -13,6 +13,7 @@
 ActiveRecord::Schema.define(:version => 20110604070408) do
 
   create_table "babies", :force => true do |t|
+    t.datetime "born_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

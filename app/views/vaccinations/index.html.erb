@@ -3,8 +3,15 @@
 <table>
   <tr>
     <th>Title</th>
+    <th>Desc</th>
     <th>Timing</th>
     <th>Contury</th>
+    <th>Create_at</th>
+    <th>Updated_at</th>
+    <th>Series</th>
+    <th>Least</th>
+    <th>Nip</th>
+    <th>Injection_type</th>
     <th></th>
     <th></th>
     <th></th>
@@ -13,8 +20,15 @@
 <% @vaccinations.each do |vaccination| %>
   <tr>
     <td><%= vaccination.title %></td>
+    <td><%= vaccination.desc %></td>
     <td><%= vaccination.timing %></td>
     <td><%= vaccination.contury %></td>
+    <td><%= vaccination.created_at %></td>
+    <td><%= vaccination.updated_at %></td>
+    <td><%= vaccination.series %></td>
+    <td><%= vaccination.least %></td>
+    <td><%= vaccination.nip %></td>
+    <td><%= vaccination.injection_type %></td>
     <td><%= link_to 'Show', vaccination %></td>
     <td><%= link_to 'Edit', edit_vaccination_path(vaccination) %></td>
     <td><%= link_to 'Destroy', vaccination, :confirm => 'Are you sure?', :method => :delete %></td>

@@ -1,0 +1,22 @@
+<%= form_for(@baby, :url => {:action => :create}) do |f| %>
+  <% if @baby.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@baby.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @baby.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    birthday<br />
+    <%= f.datetime_select :born_at %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

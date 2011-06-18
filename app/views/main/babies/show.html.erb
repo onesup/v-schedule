@@ -10,29 +10,25 @@
     <th>Title</th>
     <th>Desc</th>
     <th>Timing</th>
+    <th>D-day</th>
     <th>Contury</th>
     <th>Series</th>
     <th>Least</th>
     <th>Nip</th>
     <th>Injection_type</th>
-    <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @vaccinations.each do |vaccination| %>
   <tr>
     <td><%= vaccination.title %></td>
     <td><%= vaccination.desc %></td>
-    <td><%= @baby.born_at + vaccination.timing  %></td>
+    <td><%=l (@baby.born_at + vaccination.timing).to_date, :format => :default  %></td>
+    <td><%= time_ago_in_words(@baby.born_at + vaccination.timing) %></td>
     <td><%= vaccination.contury %></td>
     <td><%= vaccination.series %></td>
     <td><%= vaccination.least %></td>
     <td><%= vaccination.nip %></td>
     <td><%= vaccination.injection_type %></td>
-    <td><%= link_to 'Show', vaccination %></td>
-    <td><%= link_to 'Edit', edit_vaccination_path(vaccination) %></td>
-    <td><%= link_to 'Destroy', vaccination, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

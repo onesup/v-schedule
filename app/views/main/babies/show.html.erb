@@ -2,7 +2,7 @@
 
 <p>
   <b>생일 :</b>
-  <%= @baby.born_at %>
+  <%=l @baby.born_at.to_date, :format => :default %>
 </p>
 
 <table>
@@ -10,10 +10,8 @@
     <th>Title</th>
     <th>Desc</th>
     <th>Timing</th>
-    <th>D-day</th>
     <th>Contury</th>
     <th>Series</th>
-    <th>Least</th>
     <th>Nip</th>
     <th>Injection_type</th>
   </tr>
@@ -22,11 +20,13 @@
   <tr>
     <td><%= vaccination.title %></td>
     <td><%= vaccination.desc %></td>
-    <td><%=l (@baby.born_at + vaccination.timing).to_date, :format => :default  %></td>
-    <td><%= time_ago_in_words(@baby.born_at + vaccination.timing) %></td>
+    <% unless vaccination.least.nil?  %>
+    <td>접종기간은 <%=l (@baby.born_at + vaccination.timing).to_date, :format => :default  %> ~ <%=l (@baby.born_at + vaccination.least).to_date, :format => :default  %> 입니다. (<%= time_ago_in_words(@baby.born_at + vaccination.timing) %> 남았습니다.)</td> 
+    <% else %>
+    <td>접종일은 <%=l (@baby.born_at + vaccination.timing).to_date, :format => :default  %> 입니다. (<%= time_ago_in_words(@baby.born_at + vaccination.timing) %> 남았습니다.)</td>
+    <% end %>
     <td><%= vaccination.contury %></td>
     <td><%= vaccination.series %></td>
-    <td><%= vaccination.least %></td>
     <td><%= vaccination.nip %></td>
     <td><%= vaccination.injection_type %></td>
   </tr>

@@ -3,11 +3,11 @@ VSchedule::Application.routes.draw do
 
   resources :vaccinations
   
-  match '/main/new' => 'main#new'
-  match '/main/:id' => 'main#show'
-  match '/main/create' => 'main#create'
-  
-  match '/main' => 'main#new'
+    namespace :main do
+      # Directs /admin/products/* to Admin::ProductsController
+      # (app/controllers/admin/products_controller.rb)
+      resources :babies, :only => [:new, :show, :create]
+    end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

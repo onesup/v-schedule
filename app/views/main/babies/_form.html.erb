@@ -12,11 +12,12 @@
   <% end %>
 
   <div class="field">
-    생일<br />
+    생일
     <%= f.datetime_select(:born_at, :start_year => 1989, :discard_hour => true)  %>
   </div>
 
   <div class="actions">
     <%= f.submit %>
   </div>
+  
 <% end %>

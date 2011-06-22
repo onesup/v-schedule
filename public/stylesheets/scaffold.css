@@ -17,7 +17,8 @@ a:visited { color: #666; }
 a:hover { color: #fff; background-color:#000; }
 
 div.field, div.actions {
-  margin-bottom: 10px;
+  margin: 10px;
+  float:left;
 }
 
 #notice {
@@ -58,4 +59,7 @@ div.field, div.actions {
 li.vaccination{
 	background-color:#eee;
 	width:500px;
+	margin-bottom:10px;
+	padding:10px;
+	list-style:none;
 }

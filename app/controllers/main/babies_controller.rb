@@ -6,7 +6,7 @@ class Main::BabiesController < ApplicationController
 
   def show
     @baby = Baby.find(params[:id])
-    @vaccinations = Vaccination.all
+    @vaccinations = Vaccination.order("timing asc")
   end
 
   def create

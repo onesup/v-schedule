@@ -56,6 +56,28 @@ em {
 body{
   max-width: 640px;
 }
+div.footer{
+  margin-top: 250px;
+  font-size:13px;
+}
+ul.credits{
+  float:left;
+}
+li.credit{
+  clear:both;
+}
+div.sns{
+  float:left;
+}
+
+div.twitter, div.facebook{
+  float:left;
+  margin-right:20px;
+}
+dl.credit dt, dl.credit dd{
+  margin-right:10px;
+  float:left;
+}
 div.main{
   min-width: 320px;
 }
@@ -82,7 +104,7 @@ form.new_baby select{
   font-size: 30px;
 }
 form.new_baby input{
-  margin-top: 10px;
+  margin-top: 20px;
   font-size: 30px;
 }
 
@@ -107,3 +129,4 @@ li.vaccination{
 	width:500px;
 	padding:10px 0 0 5px;
 }
+

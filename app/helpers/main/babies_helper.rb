@@ -8,9 +8,9 @@ module Main::BabiesHelper
       
     unless vaccination.least.nil?
       least = l((@baby.born_at + vaccination.least).to_date, :format => :default)  
-      "접종기간은 #{timing} ~ #{least}입니다. (#{time_ago})남았습니다.)"
+      "접종기간은 #{timing} ~ #{least}입니다."
     else 
-      "접종일은 #{timing}입니다. (#{time_ago}남았습니다.)"
+      "접종일은 #{timing}입니다."
     end  
       
   end

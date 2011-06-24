@@ -1,20 +1,22 @@
-<p id="notice"><%= notice %></p>
+<div class="baby">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <b>생일 :</b>
-  <%=l @baby.born_at.to_date, :format => :default %>
-</p>
-
-
-<ul class="vaccinations">
-<% @vaccinations.each do |vaccination| %>
-  <li class="vaccination">
-    <strong class="vaccination_title"><%= vaccination.title %> <%= vaccination.series %></strong>
-    <p class="vaccinattion_desc"><%= vaccination.desc %></p>
-    <p class="least_display"><%= least_display(@baby,vaccination) %></p>
-  </li>
-<% end %>
-</ul>
+  <dl class="born_at">
+    <dt><%=t(:short, :scope => :born_at) %></dt>
+    <dd><%=l @baby.born_at.to_date, :format => :default %></dd>
+  </dl>
 
 
-<%= link_to 'Back', new_main_baby_path %>
+  <ul class="vaccinations">
+  <% @vaccinations.each do |vaccination| %>
+    <li class="vaccination">
+      <strong class="vaccination_title"><%= vaccination.title %> <%= vaccination.series %></strong>
+      <p class="vaccinattion_desc"><%= vaccination.desc %></p>
+      <p class="least_display"><%= least_display(@baby,vaccination) %></p>
+    </li>
+  <% end %>
+  </ul>
+
+
+  <%= link_to 'Back', new_main_baby_path %>
+</div>

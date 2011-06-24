@@ -1,4 +1,11 @@
 ko:
+  application_title: "우리 아가 주사맞는 날"
+  new_baby: "우리 아가는?"
+  new_baby_submit: "주사맞는 날 확인!"
+  born_at: 
+    long: "우리 아가 생일"
+    short: "생일"
+  
   date:
     formats:
       default: "%Y/%m/%d"

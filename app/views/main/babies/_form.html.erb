@@ -12,11 +12,11 @@
   <% end %>
 
   <div class="field">
-    생일<br />
+    <%= f.label t(:long, :scope => :born_at) %>
     <%= f.datetime_select(:born_at, :start_year => 1989, :discard_hour => true)  %>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "#{t :new_baby_submit}" %>
   </div>
 <% end %>

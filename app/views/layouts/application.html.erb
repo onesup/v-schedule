@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>VSchedule</title>
-  <%= stylesheet_link_tag :all %>
+  <title><%=t :application_title %></title>
+  <%= stylesheet_link_tag "application" %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
-
-<%= yield %>
-
+  <div class="main">
+    <h1 class="main_title"><%=link_to t(:application_title), root_path %></h1>
+    <%= yield %>
+  </div>
 </body>
 </html>
